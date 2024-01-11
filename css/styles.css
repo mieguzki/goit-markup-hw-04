@@ -60,6 +60,7 @@ img {
     display: flex;
     align-items: center;
 }
+
 .header-logo {
     color:#4D5AE5;
     font-family: Raleway, sans-serif;
@@ -77,6 +78,11 @@ img {
     display: flex;
     gap: 40px;
 }
+.header-menu-link:hover,
+.header-menu-link:focus,
+.header-menu-link:active {
+   color:#404bbf;
+}
 
 .header-menu-link { 
     color:#2E2F42;
@@ -85,15 +91,24 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em; 
     padding: 24px 0;    
-    display: block;   
+    display: block;
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2 ,1);       
 }
-
-.header-menu-link:hover,
-.header-menu-link:focus,
-.header-menu-link:active {
-   color:#404bbf;
+.header-menu-link:active{
+    color:#404bbf;
 }
-
+.header-menu-link::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color:#404bbf;
+    border-radius: 2px;
+    bottom: -1px;
+    left: 0;
+    position: absolute;    
+}
 .adress {
     font-style: normal;
     margin-left: auto;
@@ -121,6 +136,10 @@ img {
     padding-bottom: 188px;    
     margin:auto; 
     background-color: #2E2F42;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.70),rgba(46, 47, 66, 0.70)), url(../images/people-office\ 1.jpg);
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: cover;
 }
 
 
@@ -177,6 +196,21 @@ padding-bottom: 120px;
     width: calc((100% - 72px) / 4)       
       
 }
+.features-svg{
+    background-color:#F4F4FD ;
+    border-radius: 4px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+    
+}
+.features-svg-name {
+    width: 64px;
+    height: 64x;   
+    
+}
+
     
 .features-title {
     color:#2E2F42;
@@ -229,13 +263,46 @@ letter-spacing:0.02em;
 }
 
 .our-team-img {
-    margin: 0 auto;    
+    margin: 0 auto;  
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);  
 }
 
 .our-team-heel {
     padding: 32px 0;    
     text-align: center;
 }
+
+.icon-list{
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8px;
+    
+}
+.icon-item{
+    width: 40px;
+    height: 40px;
+}
+.icon-link {
+    background-color: #4D5AE5;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.icon-link:hover,
+.icon-link:focus{
+    color: #404BBF
+}
+
+.icon-name {
+    
+}
+
 
 .our-team-name {
     color:#2E2F42;       
@@ -281,13 +348,43 @@ letter-spacing:0.02em;
 
 .portfolio-heel {
     width: calc( (100% - 24px * 2) /3 ); 
-      
+    position: relative;      
 }
+
 
 .portfolio-img {
     margin: 0 auto;    
     
 }  
+.cover{
+    color: #F4F4FD;
+font-size: 16px;
+font-weight: 400;
+line-height: 1.5;
+letter-spacing: 0.02em;
+}
+.cover-text {
+    position: absolute;
+    top:0;
+    background:  #4D5AE5;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 40px 32px 164px 32px;
+    transform:translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+.portfolio-cover{
+    position: relative;
+    overflow: hidden;   
+    
+}
+.portfolio-heel:hover .cover-text{
+    transform:translateY(-100%)
+
+}    
+
 .portfolio-body  {
     padding: 32px 16px;    
     border: 1px solid #e7e9fc;
@@ -318,12 +415,8 @@ letter-spacing:0.02em;
     padding: 100px 0 ;
     background-color: #2E2F42;
     padding: 100 0;   
-}
-
-.container-footer {
-    
+} 
          
-}
 
 .footer-logo {
     color:#4D5AE5;
@@ -348,6 +441,18 @@ letter-spacing:0.02em;
     line-height:1.5;
     letter-spacing:0.02em;    
     max-width: 264px;     
+}
+.social-media {
+
+}
+.social-media-text{
+color:#FFF;
+font-size: 16px;
+font-weight: 500;
+line-height: 1.5; 
+letter-spacing: 0.02em;
+max-width:96px;
+   
 }
 
 /* ----------------------------------------- */

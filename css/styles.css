@@ -389,8 +389,12 @@ letter-spacing:0.02em;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
-    letter-spacing: 0.02em;   
+    letter-spacing: 0.02em;
+    padding: 40px 32px ;
     
+}
+.portfolio-cover:hover{
+    transform:translateY(0%)
 }
 .portfolio-heel:hover .cover-text{
     transform:translateY(-100%)
